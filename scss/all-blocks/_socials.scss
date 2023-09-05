@@ -1,0 +1,23 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.social {
+    & + & {
+        margin-left: 24px;
+    }
+}
+
+.social__link {
+    color: $light-cream;
+    transition: color $transition;
+
+    &:hover {
+        color: $pale-orange;
+    }
+}
+
+.social__image {
+    display: block;
+}

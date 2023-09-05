@@ -1,0 +1,217 @@
+.discovery .container {
+    position: relative;
+    padding-bottom: 150px;
+    margin-bottom: 200px;
+}
+
+.discovery__inner {
+    padding: 100px;
+    padding-bottom: 317px;
+    text-align: center;
+    color: $light-cream;
+    background-color: $dark-grey;
+    border-radius: 10px;
+}
+
+.discovery__heading {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.discovery__text {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.discovery__list {
+    position: absolute;
+    bottom: 0%;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1110px;
+    width: 100%;
+}
+
+.discovery__item {
+    max-width: 350px;
+    width: 100%;
+    padding: 48px;
+    padding-top: 72px;
+    text-align: center;
+    color: $light-cream;
+    background-color: $dark-cyan;
+    border-radius: 8px;
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 32px;
+        white-space: nowrap;
+    }
+
+    &__text {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 56px;
+        width: 72px;
+        height: 72px;
+        background-image: url("../images/svg/discovery/discovery-1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &:nth-child(2)::before {
+        background-image: url("../images/svg/discovery/discovery-2.svg");
+    }
+
+    &:nth-child(3)::before {
+        background-image: url("../images/svg/discovery/discovery-3.svg");
+    }
+}
+
+@media only screen and(max-width: 1210px) {
+    .discovery__list {
+        max-width: 1170px;
+        padding: 0 30px;
+    }
+
+    .discovery__item {
+        & + & {
+            margin-left: 10px;
+        }
+    }
+}
+
+@media only screen and(max-width: 1005px) {
+    .discovery__item {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+@media only screen and(max-width: 861px) {
+    .discovery .container {
+        padding-bottom: 290px;
+        margin-bottom: 150px;
+    }
+
+    .discovery__inner {
+        padding: 54px 74px;
+        padding-bottom: 370px;
+    }
+
+    .discovery__list {
+        flex-direction: column;
+        max-width: 668px;
+        padding: 0 44px;
+    }
+
+    .discovery__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        padding: 41px 70px;
+
+        &::before {
+            min-width: 56px;
+            max-width: 56px;
+            min-height: 56px;
+            max-height: 56px;
+            margin: 0;
+            margin-right: 24px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        &__text {
+            max-width: 350px;
+            width: 100%;
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+        }
+
+        & + & {
+            margin-top: 24px;
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and(max-width: 610px) {
+    .discovery__item {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media only screen and(max-width: 550px) {
+    .discovery .container {
+        padding-bottom: 597px;
+        margin-bottom: 120px;
+    }
+
+    .discovery__inner {
+        padding: 64px 24px;
+        padding-bottom: 661px;
+    }
+
+    .discovery__item {
+        flex-direction: column;
+        padding: 72px 20px;
+        padding-bottom: 51px;
+
+        &::before {
+            min-width: 72px;
+            max-width: 72px;
+            min-height: 72px;
+            max-height: 72px;
+            margin: 0;
+            margin-bottom: 56px;
+        }
+
+        &__title {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        &__text {
+            max-width: 255px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and(max-width: 350px) {
+    .discovery .container {
+        padding-bottom: 593px;
+    }
+
+    .discovery__list {
+        padding: 0 40px;
+    }
+
+    .discovery__item {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+}

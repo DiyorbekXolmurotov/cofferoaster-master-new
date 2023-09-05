@@ -1,0 +1,255 @@
+.steps .container {
+    margin-bottom: 200px;
+}
+
+.steps__heading {
+    margin-bottom: 95px;
+    font-size: 24px;
+    line-height: 32px;
+    color: $grey;
+}
+
+.steps__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 64px;
+}
+
+.step {
+    position: relative;
+    padding-top: 82px;
+    padding-right: 24px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $dark-cyan;
+        border-radius: 50%;
+        background-color: $light-cream;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16px;
+        transform: translateY(-50%);
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $pale-orange;
+    }
+
+    &:last-child::before {
+        content: none;
+    }
+}
+
+.step__heading {
+    max-width: 255px;
+    margin-bottom: 42px;
+
+    &__count {
+        display: block;
+        margin-bottom: 38px;
+        font-size: 72px;
+        line-height: 72px;
+        color: $pale-orange;
+    }
+
+    &__text {
+        display: block;
+        margin-bottom: 42px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.step__text {
+    max-width: 285px;
+    margin-bottom: 0;
+}
+
+.steps__inner {
+    padding: 115px 85px;
+    padding-bottom: 100px;
+    color: $light-cream;
+    background-color: $dark-grey;
+    border-radius: 10px;
+}
+
+.create-steps .steps__list {
+    margin-bottom: 0px;
+}
+
+.create-steps .step {
+    &::after {
+        background-color: transparent;
+    }
+}
+
+@media only screen and(max-width: 1085px) {
+    .steps__inner {
+        padding: 112px 40px;
+        padding-bottom: 70px;
+    }
+}
+
+@media only screen and(max-width: 900px) {
+    .step__heading {
+        margin-bottom: 40px;
+    }
+
+    .step__heading__text {
+        max-width: 225px;
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .step__text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    .steps .container {
+        margin-bottom: 150px;
+    }
+
+    .steps__list {
+        margin-bottom: 44px;
+    }
+
+    .create-steps .steps__list {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and(max-width: 666px) {
+    .steps .container {
+        margin-bottom: 120px;
+    }
+
+    .steps__inner {
+        padding: 80px 24px;
+    }
+
+    .create-steps {
+        .steps__heading {
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .steps__list {
+            grid-template-columns: none;
+            margin-bottom: 0px;
+        }
+
+        .step {
+            max-width: 330px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+
+            &::before {
+                content: none;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+
+        .step + .step {
+            margin-top: 56px;
+        }
+
+        .step__heading {
+            max-width: 100%;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+
+        .step__heading__count {
+            margin-bottom: 24px;
+        }
+
+        .step__heading__text {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .step__text {
+            max-width: none;
+        }
+
+        .steps__link {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and(max-width: 590px) {
+    .steps .container {
+        margin-bottom: 120px;
+    }
+
+    .steps__heading {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    .steps__list {
+        grid-template-columns: none;
+        margin-bottom: 80px;
+    }
+
+    .step {
+        max-width: 330px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+
+        & + & {
+            margin-top: 56px;
+        }
+    }
+
+    .step__heading {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+
+    .step__heading__count {
+        margin-bottom: 24px;
+    }
+
+    .step__heading__text {
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .step__text {
+        max-width: none;
+    }
+
+    .steps__link {
+        margin: 0 auto;
+    }
+}

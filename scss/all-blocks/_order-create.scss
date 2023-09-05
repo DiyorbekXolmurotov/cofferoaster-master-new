@@ -1,0 +1,235 @@
+.order .container {
+    margin-bottom: 170px;
+}
+
+.order__form {
+    max-width: 730px;
+    width: 100%;
+}
+
+.order__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+    font-size: 40px;
+    line-height: 48px;
+    color: $grey;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 18px;
+        height: 12px;
+        margin-left: 24px;
+        background-image: url("../images/svg/vector-up.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.order__list {
+    margin-bottom: 88px;
+}
+
+.order__item {
+    & + & {
+        margin-top: 88px;
+    }
+}
+
+.order__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order__option {
+    display: block;
+    max-width: 228px;
+    width: 100%;
+}
+
+.order__controller {
+    display: block;
+    padding: 32px 28px;
+    padding-bottom: 84px;
+    background-color: #f4f1eb;
+    border-radius: 8px;
+    transition: background-color $transition, color $transition;
+
+    &:hover {
+        background-color: $pale-orange;
+    }
+}
+
+.order__radio:checked + .order__controller {
+    background-color: $dark-cyan;
+    color: $light-cream;
+}
+
+.order__option__name {
+    display: block;
+    margin-bottom: 24px;
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.order__option__text{
+    display: block;
+}
+
+.order__summary {
+    margin-bottom: 40px;
+    padding: 27px 64px;
+    color: $light-cream;
+    background-color: $dark-grey;
+    border-radius: 10px;
+}
+
+.order__summary__title {
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.order__summary__text {
+    margin-bottom: 0;
+    font-family: $font-heading;
+    font-size: 24px;
+    line-height: 40px;
+
+    strong {
+        color: $dark-cyan;
+    }
+}
+
+.order__button {
+    margin-left: auto;
+}
+
+@media only screen and(max-width: 1000px) {
+    .order__form {
+        margin: 0 auto;
+    }
+
+    .order__option {
+        & + & {
+            margin-left: 12px;
+        }
+    }
+
+    .order__summary {
+        padding: 27px 44px;
+    }
+
+    .order__button {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and(max-width: 741px) {
+    .order__controller {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and(max-width: 693px) {
+    .order .container {
+        margin-bottom: 150px;
+    }
+
+    .order__heading {
+        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .order__list {
+        margin-bottom: 150px;
+    }
+
+    .order__item {
+        & + & {
+            margin-top: 100px;
+        }
+    }
+
+    .order__controller {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+@media only screen and(max-width: 669px) {
+    .order__controller {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+@media only screen and(max-width: 645px) {
+    .order .container {
+        margin-bottom: 120px;
+    }
+
+    .order__heading {
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .order__list {
+        margin-bottom: 120px;
+    }
+
+    .order__item {
+        & + & {
+            margin-top: 96px;
+        }
+    }
+
+    .order__options {
+        flex-direction: column;
+    }
+
+    .order__option {
+        max-width: 100%;
+
+        &__name {
+            margin-bottom: 8px;
+        }
+    }
+
+    .order__option + .order__option {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .order__controller {
+        padding: 24px 25px;
+    }
+
+    .order__summary {
+        margin-bottom: 56px;
+        padding: 32px 24px;
+    }
+}
+
+@media only screen and(max-width: 542px) {
+    .order__option__text{
+        max-width: 350px;
+    }
+}
+
+@media only screen and(max-width: 325px) {
+    .order__controller{
+        padding: 24px 20px;
+    }
+}

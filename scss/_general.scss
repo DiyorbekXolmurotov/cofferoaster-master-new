@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    font-size: 16px;
+    line-height: 26px;
+    color: $dark-grey;
+    background-color: $light-cream;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: $font-heading;
+    font-weight: 900;
+}
+
+p {
+    margin-top: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    object-fit: contain;
+}
+
+main {
+    flex-grow: 1;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    .hero__inner {
+        background-image: url("../images/jpg/hero/2x/hero-picture@2x.jpg");
+    }
+
+    .about-hero__inner {
+        background-image: url("../images/jpg/about-hero/2x/about-bg-image@2x.jpg");
+    }
+
+    .create-hero__inner {
+        background-image: url("../images/jpg/create-hero/2x/create-hero-image@2x.jpg");
+    }
+}

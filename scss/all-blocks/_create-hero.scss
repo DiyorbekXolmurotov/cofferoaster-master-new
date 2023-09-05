@@ -1,0 +1,111 @@
+.create-hero .container{
+    margin-bottom: 170px;
+}
+
+.create-hero__inner {
+    padding: 134px 85px;
+    color: $light-cream;
+    background-image: url("../../images/jpg/create-hero/1x/create-hero-image.jpg");
+    background-size: 1475px 983px;
+    background-position: 0 center;
+    border-radius: 10px;
+}
+
+.create-hero__heading {
+    margin-bottom: 32px;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+.create-hero__text {
+    max-width: 445px;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+@media only screen and(max-width: 1000px) {
+    .create-hero__inner {
+        background-position: 0 center;
+        background-position: right -500px center;
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    .create-hero .container{
+        margin-bottom: 150px;
+    }
+
+    .create-hero__inner {
+        padding: 126px 58px;
+        background-size: 1104px 736px;
+        background-position: right -370px center;
+    }
+
+    .create-hero__heading {
+        margin-bottom: 24px;
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .create-hero__text {
+        max-width: 400px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and(max-width: 550px) {
+    .create-hero .container{
+        margin-bottom: 120px;
+    }
+
+    .create-hero__inner {
+        position: relative;
+        z-index: -1;
+        padding: 100px 24px;
+        padding-bottom: 136px;
+        text-align: center;
+        background-size: 744px 496px;
+        background-position: right -225px center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: inherit;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: inherit;
+        }
+    }
+
+    .create-hero__heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+
+    .create-hero__text {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and(max-width: 375px) {
+    .create-hero__inner{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .create-hero__heading{
+        font-size: 36px;
+    }
+
+    .create-hero__text{
+        max-width: 230px;
+    }
+}

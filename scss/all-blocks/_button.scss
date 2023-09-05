@@ -1,0 +1,29 @@
+.button {
+    display: block;
+    width: 217px;
+    padding: 15px;
+    text-decoration: none;
+    font-family: $font-heading;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $light-cream;
+    background-color: $dark-cyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color $transition;
+
+    &:hover{
+        background-color: #66D2CF;
+    }
+
+    &:disabled{
+        background-color: #E2DEDB;
+    }
+}
